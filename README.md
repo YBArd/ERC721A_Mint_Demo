@@ -5,8 +5,9 @@ The goal of this technical challenge is to demonstrate the challengers ability t
 1. Produce quality Solidity code
 2. Follow best practices
 
-## Overview
+It is designed to take no more than a few hours. 
 
+## Overview
 
 
 - Hardhat repo, some tests, bonus points for deploy to testnet
@@ -23,6 +24,8 @@ Ensure you have installed:
 ## Instructions
 
 ### Part 1
+
+Make [ERC20] called [COIN]. Make owner can [enable/disable transfers]
 
 ### Part 2
 
