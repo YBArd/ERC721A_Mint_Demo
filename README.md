@@ -27,4 +27,5 @@ Ensure you have installed:
 ### Part 2
 
 ### Bonus Points 
-1. Deploy 
+1. Deploy project to a tesnet
+2. Acheive 100% statement test coverage
