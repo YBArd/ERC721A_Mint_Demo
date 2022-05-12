@@ -24,7 +24,7 @@ Clone this repo locally and publish your changes to a private repo, adding BenSp
 
 ### Part 1
 
-Make `ERC20` token called `COIN`. In your contract, make it so that the owner can `enable/disable transfers` of `Coin`. Test this contract in TypeScript or Javascript in Hardhat.
+Make an `ERC20` token called `COIN`. In your contract, make it so that the owner can `enable/disable transfers` of `Coin`. Test this contract in TypeScript or Javascript in Hardhat.
 
 ### Part 2
 
