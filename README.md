@@ -25,7 +25,7 @@ Ensure you have installed:
 
 ### Part 1
 
-Make `ERC20` called `COIN`. Make owner can `enable/disable transfers`
+Make `ERC20` called `COIN`. In your contract, make it so that the owner can `enable/disable transfers` of `Coin`.
 
 ### Part 2
 
