@@ -32,5 +32,5 @@ Make an `ERC20` token called `COIN`. In your contract, make it so that the owner
 Make an `NFT` where users can only mint an `NFT` by paying `1000 COIN` (the `ERC20` above) to the `NFT contract`. Test this contract in `TypeScript or Javascript in Hardhat`.
 
 ### Part 3 (Bonus Points)
-1. Deploy project to a tesnet
+1. Deploy project to a testnet
 2. Acheive 100% statement test coverage
