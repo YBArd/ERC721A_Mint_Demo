@@ -17,7 +17,9 @@ Ensure you have installed:
 
 * NodeJS 14+
 * Yarn (_install using `npm i -g yarn`_)
-* Hardhat (_install using `npm install --save-dev hardhat`_)
+* Hardhat (_install using `npm install --save-dev hardhat`_).  
+
+Clone this repo locally and push your changes to a private repo, adding [BenSparksCode](https://github.com/BenSparksCode), [TamaraRingas](https://github.com/TamaraRingas) and [Saksijas](https://github.com/saksijas) as contributors.
  
 
 ## Instructions
