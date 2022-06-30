@@ -3,13 +3,15 @@ pragma solidity ^0.8.4;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "./ERC721A.sol";
+import "./IERC721A.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
 /// @title                      NFT
 /// @notice                     Inherits OpenZeppelin ERC721 and enables
 ///                             minting with 1000 ERC20 tokens at coinAddress
-contract NFT is ERC721, Ownable {
+contract NFT is ERC721A, Ownable {
 
     using Counters for Counters.Counter; // Safely increments tokenId during minting
     
@@ -27,7 +29,7 @@ contract NFT is ERC721, Ownable {
     ///                         LNM (Linum)
     /// @param _coinAddress     Contract address of ERC20 for minting
     /// @dev                    Uses COIN to mint                   
-    constructor(address _coinAddress) ERC721("NFT", "LNM") {
+    constructor(address _coinAddress) ERC721A("NFT", "LNM") {
     	coinAddress = IERC20(_coinAddress);
     }
 
@@ -35,11 +37,11 @@ contract NFT is ERC721, Ownable {
 
     /// @notice                 Minting function
     /// @dev                    Overrides ERC721 safeMint() to accept 1000 COIN
-    function safeMint() public {
+    function safeMint(uint256 quantity) public {
     	coinAddress.transferFrom(msg.sender, address(this), fee);
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
-        _safeMint(msg.sender, tokenId);
+        _safeMint(msg.sender, quantity);
     }
 
     /// @notice                 Token balance withdrawal 
