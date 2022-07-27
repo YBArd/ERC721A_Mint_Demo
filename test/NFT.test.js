@@ -17,7 +17,7 @@ describe('NFT', () => {
 	describe('safemint', async () => {
 		it("Should mint 1 NFT to addr1 and deduct 1000 COIN", async () => {
 			expect(await coin.balanceOf(addr1.address)).to.equal(10000);
-			await nft.connect(addr1).safeMint();
+			await nft.connect(addr1).safeMint(1);
 			expect(await nft.balanceOf(addr1.address)).to.equal(1);
 			expect(await coin.balanceOf(addr1.address)).to.equal(9000);
 		});
@@ -25,7 +25,7 @@ describe('NFT', () => {
 
 	describe('withdrawal', async () => {
 		it("Contract owner should be able to withdraw COIN balance from minting revenue", async () => {
-			await nft.connect(addr1).safeMint();
+			await nft.connect(addr1).safeMint(1);
 			await nft.connect(owner).rugTheFunds();
 			expect(await coin.balanceOf(owner.address)).to.equal(1000); 
 		});
